@@ -1,5 +1,4 @@
 import React from "react";
-
 import StuffForm from "./components/StuffForm";
 import StuffCard from "./components/StuffCard";
 
@@ -21,13 +20,18 @@ const INITIAL_STUFFS = [
 export default function App() {
   const [stuffs, setStuffs] = React.useState(INITIAL_STUFFS);
 
+  const handleAdd = (newStuff) => {
+    // Update the stuffs state by creating a new array with the existing stuffs and the new stuff
+    setStuffs([...stuffs, newStuff]);
+  };
+
   return (
     <>
       <header>
         <h1>My Stuff</h1>
       </header>
 
-      <StuffForm></StuffForm>
+      <StuffForm onAdd={handleAdd} />
 
       <div className="stuff-list">
         {stuffs.map((stuff, index) => (

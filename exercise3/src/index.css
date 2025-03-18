@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 :root {
-  --main-color: #9cc54b;
+  --main-color: rgb(159, 201, 74);
   --main-color-light: #a9d453;
   --grey-color: #bfbfbf;
   font-family: "Montserrat", sans-serif;
@@ -109,4 +109,25 @@ header h1 {
 
 .checkout-button:hover {
   background: var(--main-color-light);
+}
+.order-button.disabled {
+  background-color: #bfbfbf;
+  cursor: not-allowed;
+}
+.total-price-container {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center; 
+  margin-top: 20px;
+  width: 100%;
+}
+.total-price {
+  color: white; 
+  font-size: 24px; 
+  font-weight: bold; 
+  padding: 20px 200px; 
+  border: 2px solid #a9d453; 
+  border-radius: 10px; 
+  background-color: #a9d453; 
 }
